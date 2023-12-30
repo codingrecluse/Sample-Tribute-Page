@@ -1,0 +1,88 @@
+﻿section {
+    margin: auto auto;
+}
+section {
+    padding: 0 2rem;
+}
+img {
+    display: block;
+}
+.logo, .certification{
+    margin: 0 auto;
+    width: 100%;
+    max-height: 65vh;
+    object-fit: contain;
+}
+
+hr{
+    width: 88vw;
+    margin: 0 auto;
+    color: #d9c8ae;
+}
+.cert-section{
+    padding: 2rem;
+}
+.certifications {
+    overflow: clip;
+    margin-top: 2rem;
+}
+.certifications img {
+    position: relative;
+    padding: 2rem;
+    animation: 1s ease-in drawer-slide;
+}
+.certification-select{
+    margin: 0 auto;
+    padding: 0 2rem;
+    display:flex;
+    gap: 1rem;
+    font-size: 4rem;
+    width: fit-content;
+    border: 2px solid #d9c8ae;
+    border-radius: 2rem;
+}
+    .certification-select:hover {
+        background-color: rgb(255,255,255,0.1);
+        cursor: pointer;
+    }
+.dropdown-arrow{
+}
+
+figcaption{
+    text-align:center;
+    font-size: 4rem;
+}
+p{
+    margin:1rem 15vw;
+    font-size: 2rem;
+}
+
+a{
+    text-decoration:none;
+    color: inherit;
+}
+.hero-link:hover{
+    font-style: italic;
+}
+
+@media(min-width: 1600px){
+    /*main {
+        display:flex;
+    }
+    .introduction, .certifications{
+        max-width: 50vw;
+    }
+    hr{
+        visibility: collapse;
+    }*/
+}
+
+@keyframes drawer-slide{
+    0% {
+        top: -100%
+    }
+    to{
+        top:0;
+    }
+
+}

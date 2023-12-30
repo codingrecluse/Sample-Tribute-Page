@@ -1,0 +1,35 @@
+﻿@page "/"
+@rendermode InteractiveServer
+
+<main id="main">
+    <PageTitle>Practice Tribute Page</PageTitle>
+    <section class="intro-section">
+        <img class="logo" src="codingrecluse-logo.jpeg" alt="CodingRecluse logo" />
+        <figcaption id="img-caption">CodingRecluse Software Development Services</figcaption>
+        <p id="tribute-info"><a class="hero-link" href="https://www.github.com/codingrecluse" target="_blank">CodingRecluse</a> is a small software development company located in Pennsylvania. We primarily work with C# and other related .NET technologies such as Blazor, along with additional experience with Microsoft SQL server and T-SQL.</p>
+    </section>
+    <hr />
+    <section class="cert-section">
+        <div class="certification-select"
+        @onclick="ShowCertifications">
+            <a href="#certifications"><strong>Certifications</strong></a>
+            <img id="dropdown-arrow" src="arrow-down.svg" alt="dropdown menu indicator" />
+        </div>
+        @if (showCerts)
+        {
+            <div id="certifications" class="certifications">
+                <img id="ms-csharp-cert" class="certification" src="ms-csharp-cert.png" alt="foundational C# certification" loading="lazy"/>
+            </div>
+        }
+    </section>
+</main>
+
+@code {
+    private bool showCerts = false;
+    private void ShowCertifications(MouseEventArgs e)
+    {
+        showCerts = !showCerts;
+    }
+}
+
+
